@@ -1,13 +1,11 @@
 contact_book = {}
 
-# Function to add a contact
 def add_contact():
     name = input("Enter the contact name: ").strip().lower()
     phone = input("Enter the phone number: ").strip()
     contact_book[name] = phone
     print(f"Contact '{name.title()}' added.")
 
-# Function to remove a contact
 def remove_contact():
     name = input("Enter the contact name to remove: ").strip().lower()
     if name in contact_book:
@@ -16,7 +14,6 @@ def remove_contact():
     else:
         print("Contact not found.")
 
-# Function to search for a contact
 def search_contact():
     name = input("Enter the contact name to search: ").strip().lower()
     if name in contact_book:
