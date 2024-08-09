@@ -1,40 +1,37 @@
-# Initialize an empty contact book
 contact_book = {}
 
 # Function to add a contact
 def add_contact():
-    name = input("Enter the contact name: ").strip().lower()  # Convert to lowercase
+    name = input("Enter the contact name: ").strip().lower()
     phone = input("Enter the phone number: ").strip()
     contact_book[name] = phone
-    print(f"Contact '{name.title()}' added.")  # Display the name with the first letter capitalized
+    print(f"Contact '{name.title()}' added.")
 
 # Function to remove a contact
 def remove_contact():
-    name = input("Enter the contact name to remove: ").strip().lower()  # Convert to lowercase
+    name = input("Enter the contact name to remove: ").strip().lower()
     if name in contact_book:
         del contact_book[name]
-        print(f"Contact '{name.title()}' removed.")  # Display the name with the first letter capitalized
+        print(f"Contact '{name.title()}' removed.") 
     else:
         print("Contact not found.")
 
 # Function to search for a contact
 def search_contact():
-    name = input("Enter the contact name to search: ").strip().lower()  # Convert to lowercase
+    name = input("Enter the contact name to search: ").strip().lower()
     if name in contact_book:
-        print(f"{name.title()}'s phone number is {contact_book[name]}")  # Display the name with the first letter capitalized
+        print(f"{name.title()}'s phone number is {contact_book[name]}")
     else:
         print("Contact not found.")
 
-# Function to display all contacts
 def display_contacts():
     if contact_book:
         print("Contact Book:")
         for name, phone in contact_book.items():
-            print(f"{name.title()}: {phone}")  # Display each name with the first letter capitalized
+            print(f"{name.title()}: {phone}")
     else:
         print("No contacts in the contact book.")
 
-# Main function to run the contact book program
 def main():
     while True:
         print("\nContact Book Menu:")
@@ -59,6 +56,4 @@ def main():
             break
         else:
             print("Invalid choice. Please choose a valid option.")
-
-# Run the contact book program
 main()
